@@ -1,0 +1,75 @@
+/* GLOBAL STYLES
+-------------------------------------------------------------------------- */
+
+/* Padding below the footer and lighter body text */
+body {
+  background: darkgray;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: center;
+}
+
+tr {
+  text-align: center;
+}
+
+.jumbotron {
+  color:oldlace;
+  padding: 2rem 1rem;
+  margin-bottom: 0rem;
+  background: url("https://images.unsplash.com/photo-1504576613868-82d2b1e5b424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  border-radius: .3rem;
+}
+
+.data {
+  padding: 2rem 2rem;
+  background-color: #343a40!important;
+  color:oldlace;
+}
+
+.facts{
+  padding: 2rem 3rem;
+}
+
+
+
+/* MARKETING CONTENT -------------------------------------------------- */
+
+
+.marketing h2 {
+    font-weight: 400;
+    color: oldlace;
+    font-size: 50px;
+
+}
+
+.col-md-7 {
+
+}
+
+/* Featurettes --------------------------------------------------------- */
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+.row {
+  background:#2e3238;
+  vertical-align:middle;
+}
+
+
+/* RESPONSIVE CSS ---------------------------------------------------------- */
+
+
+.featurette-heading {
+    
+    text-align: center;
+    vertical-align: middle;
+
+}
+

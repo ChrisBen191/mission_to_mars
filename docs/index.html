@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Mission to Mars</title>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/my_style.css') }}">
+    
+    
+</head>
+
+<!-- Start of the body -->
+
+<body>
+<!-- HEADER SECTION CONTAINS: the header.  -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">  </a>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            </div>
+        </nav>
+    </header>
+
+
+<!-- JUMBOTRON SECTION CONTAINS: featured photo, weather, and button for rescraping for data -->
+    <section class="jumbotron text-center">
+        <div class="container jumbotron">
+            <h1 class="jumbotron-heading">Mission to MARS: Facts, News and Weather Updates.</h1>
+            <br><br>
+            <img src="{{result.image_url}}" class="img-fluid rounded-circle" alt="Responsive image">
+            <br><br><br><br>
+            <p>
+                <h2>Current MARS Weather:</h2>
+                <br><br>
+                {{result.mars_weather}}
+            </p>
+        </div>
+    </section>
+
+<!-- SPACE BUTTON SECTION CONTAINS: button triggering flask to scrape data again -->
+    <section class="data text-center">
+        <p class="lead">
+            Wondering how MARS is doing? 
+        </p>
+        <p>
+            <a href="/scrape" class="btn btn-primary my-2">Call out to Space.</a>
+        </p>
+    </section>
+
+<!-- FACTS SECTION CONTAINS: html table holding the Mars facts -->
+    <section> 
+        <div class="facts text-center">
+            <h1 align ='center'>FACTS OF MARS</h1>
+            <table class="facts-table table-dark table-hover">
+            {{result.html_table_facts|safe}}
+            </table>
+        </div>
+    </section>
+
+<!-- FEATURETTE SECTION CONTAINS: name and image of all 4 Mars hemispheres -->
+    <div class="container marketing">
+
+<!--Hemisphere column-->
+        <hr class="featurette-divider">
+        <h1 align ='center'>MAR'S HEMISPHERES</h1>
+        <br><br>
+        <div class="row featurette-text">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{result.hemi_image_urls[0]['title']}}</h2>
+            </div>
+            <div class="col-md-5">
+                <img src="{{result.hemi_image_urls[0]['img_url']}}" alt="ain't workin" class="img-thumbnail">
+            </div>
+        </div>
+<!--Hemisphere column-->
+        <hr class="featurette-divider">
+        <div class="row featurette-text">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">{{result.hemi_image_urls[1]['title']}}</h2>
+            </div>
+            <div class="col-md-5">
+                <img src="{{result.hemi_image_urls[1]['img_url']}}" alt="ain't workin" class="img-thumbnail">
+            </div>
+        </div>
+<!--Hemisphere column-->
+        <hr class="featurette-divider">
+        <div class="row featurette-text">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{result.hemi_image_urls[2]['title']}}</h2>
+            </div>
+            <div class="col-md-5">
+                <img src="{{result.hemi_image_urls[2]['img_url']}}" alt="ain't workin" class="img-thumbnail">
+            </div>
+        </div>
+<!--Hemisphere column-->
+        <hr class="featurette-divider">
+        <div class="row featurette-text">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">{{result.hemi_image_urls[3]['title']}}</h2>
+            </div>
+            <div class="col-md-5">
+                <img src="{{result.hemi_image_urls[3]['img_url']}}" alt="ain't workin" class="img-thumbnail">
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
